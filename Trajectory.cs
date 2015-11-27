@@ -219,7 +219,7 @@ public static class Trajectory
     /// <param name="trajectoryDuration"> Amount of time in seconds to predict. </param>
     /// <param name="lineDuration"> Amount of time in seconds the drawn line will persist. </param>
     /// <param name="constantForce"> Will the force be applied every FixedUpdate. </param>
-    /// <param name='depthTest'> Whether or not the cone should be faded when behind other objects. </param>
+    /// <param name='depthTest'> Whether or not the line should be faded when behind other objects. </param>
     public static void DebugTrajectory(this Rigidbody2D rb, Vector2 force, ForceMode2D mode, Color color,
         float trajectoryDuration = 1.0f, float lineDuration = 0.0f, bool constantForce = false, bool depthTest = false)
     {
@@ -227,7 +227,7 @@ public static class Trajectory
         for (var i = 0; i < positions.Length - 1; i++)
             Debug.DrawLine(positions[i], positions[i + 1], color, lineDuration, depthTest);
     }
-
+    
     /// <summary>
     ///     Draws a <seealso cref="Rigidbody" />'s trajectory using <seealso cref="Debug" />.DrawLine.
     /// </summary>
@@ -238,7 +238,7 @@ public static class Trajectory
     /// <param name="trajectoryDuration"> Amount of time in seconds to predict. </param>
     /// <param name="lineDuration"> Amount of time in seconds the drawn line will persist. </param>
     /// <param name="constantForce"> Will the force be applied every FixedUpdate. </param>
-    /// <param name='depthTest'> Whether or not the cone should be faded when behind other objects. </param>
+    /// <param name='depthTest'> Whether or not the line should be faded when behind other objects. </param>
     public static void DebugTrajectory(this Rigidbody rb, Vector3 force, ForceMode mode, Color color,
         float trajectoryDuration = 1.0f, float lineDuration = 0.0f, bool constantForce = false, bool depthTest = false)
     {
