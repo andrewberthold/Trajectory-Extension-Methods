@@ -11,15 +11,14 @@
 ///     trajectory using only the objects current velocity and regular physics forces without any additonal forces.
 ///     When using these zero vectors the forcemode is irrelevant.<para />
 /// 
-///     For RigidBody's, the calculations act upon <seealso cref="Physics" />'s Gravity,
+///     For RigidBody, the calculations act upon <seealso cref="Physics" />'s Gravity,
 ///     and the Rigidbodys's Mass, Linear Drag, UseGravity and Freeze Position Constraints. 
-///     For Rigidbody2D's, the calculations act upon <seealso cref="Physics2D" />'s Gravity 
+///     For Rigidbody2D, the calculations act upon <seealso cref="Physics2D" />'s Gravity 
 ///     and MaxTranslationSpeed, and the Rigidbody2D's Mass, Linear Drag, Gravity Scale and 
 ///     Freeze Position Constraints.<para />
 /// 
 ///     2D trajectory prediction may become innaccurate when using extremely high linear drag values or if the 
-///     velocity exceeds Physics2D.MaxTranslationSpeed. 
-/// 
+///     velocity exceeds Physics2D.MaxTranslationSpeed.  
 /// </remarks>
 public static class Trajectory
 {
