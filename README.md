@@ -44,4 +44,6 @@ constantForce - bool : For predicting forces that are applied every FixedUpdate?
 depthTest - bool : Whether or not the line should be faded when behind other objects.
 
 
+NOTE:
 
+Since I didn't know precisely how and in what order unity's 3D "PhysX" and 2D "Box2D" engines apply their forces, It was mostly guess work. Both 2D and 3D predictions begin to fall apart when the drag is higher than the Physics Framerate. Apart from that i haven't been able to find any errors with the 3D trajectory, even when using absurd values for mass, timestep, force etc... The 2D predictions however reveal slight inaccuracies when traveling at very fast speeds over huge distances, the margin of error is probably only ~0.1 - 0.5% and shouldn't be noticeable in normal use cases.
